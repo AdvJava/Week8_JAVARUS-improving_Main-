@@ -43,6 +43,7 @@ public class Main
                 if(empInput==1)//new emp
                 {
                     //temp vairables for emp 
+                    Scanner empread=new Scanner(System.in);
                     String firstName,lastName,position;
                     int age,year,month,day;
                     double commissionRate,grossSales;
@@ -50,21 +51,21 @@ public class Main
                     //Ask for user input
                     System.out.println();
                     System.out.println("Enter Fist name:");
-                    firstName=read.nextLine();
+                    firstName=empread.nextLine();
                     System.out.println("Enter Last name:");
-                    lastName=read.nextLine();
+                    lastName=empread.nextLine();
                     System.out.println("Enter position:");
-                    position=read.nextLine();
+                    position=empread.nextLine();
                     System.out.println("Enter age:");
-                    age=read.nextInt();
+                    age=empread.nextInt();
                     System.out.println("Enter hire year:");
-                    year=read.nextInt();
+                    year=empread.nextInt();
                     System.out.println("Enter hire month:");
-                    month=read.nextInt();
+                    month=empread.nextInt();
                     System.out.println("Enter hire day:");
-                    day=read.nextInt();
+                    day=empread.nextInt();
                     System.out.println("Enter Commision Rate:");
-                    commissionRate=read.nextDouble();
+                    commissionRate=empread.nextDouble();
                     
                     
                     comEmp=new CommissionSalesEmployee(firstName,lastName,age,position,year,month,day,commissionRate,0.0);
