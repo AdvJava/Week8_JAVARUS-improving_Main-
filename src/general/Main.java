@@ -47,7 +47,7 @@ public class Main
                     Scanner empread=new Scanner(System.in);
                     String firstName="",lastName="",position="";
                     int age=0,year=0,month=0,day=0;
-                    double commissionRate,grossSales;
+                    double commissionRate=0.0,grossSales=0.0;
                     
                     boolean empFlag=true;
                     do
