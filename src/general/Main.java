@@ -1,4 +1,5 @@
 package general;
+import java.util.*;
 import java.util.ArrayList;
 import hr.*;
 import java.util.Scanner;
@@ -48,16 +49,53 @@ public class Main
                     int age,year,month,day;
                     double commissionRate,grossSales;
                     
-                    //Ask for user input
-                    System.out.println();
-                    System.out.println("Enter Fist name:");
-                    firstName=empread.nextLine();
+                    boolean empFlag=true;
+                    do
+                    {
+                        try
+                        {
+                            //Ask for user input
+                            System.out.println("Enter Fist name:");
+                            firstName=empread.nextLine();
+                            if (firstName.equals(""))
+                                throw new Exception();
+                            empFlag=false;
+                        }
+                        catch(Exception e)
+                        {
+                            System.out.println("An error occurred");
+                            e.printStackTrace();
+                            empFlag=true;
+                        }
+                    }while(empFlag);
+                    
                     System.out.println("Enter Last name:");
                     lastName=empread.nextLine();
                     System.out.println("Enter position:");
                     position=empread.nextLine();
-                    System.out.println("Enter age:");
-                    age=empread.nextInt();
+                    
+                    do
+                    {
+                        try
+                        {
+                            System.out.println("Enter age:");
+                            age=empread.nextInt();
+                            if(age<16 && age>110)
+                                throw new Exception();
+                            empFlag=false;
+                        }
+                        catch(InputMismatchException | ArithmeticException error)
+                        {
+                            System.out.println("Invalid Input");
+                            empFlag=true;                           
+                        }
+                        catch(Exception e)
+                        {
+                            System.out.println("Invalid Input");
+                            empFlag=true;                           
+                        }
+                    }while(empFlag);
+                    
                     System.out.println("Enter hire year:");
                     year=empread.nextInt();
                     System.out.println("Enter hire month:");
@@ -101,4 +139,10 @@ public class Main
         }
         while(keepGoing);//end of loop
     }//end of main   
+    private static int readInput() throws InputMismatchException
+    {
+        Scanner read =new Scanner(System.in);
+        int input=Integer.parseInt(read.nextLine());
+        return input;
+    }
 }//end of class
