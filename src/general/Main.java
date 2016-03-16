@@ -45,8 +45,8 @@ public class Main
                 {
                     //temp vairables for emp 
                     Scanner empread=new Scanner(System.in);
-                    String firstName,lastName,position;
-                    int age,year,month,day;
+                    String firstName="",lastName="",position="";
+                    int age=0,year=0,month=0,day=0;
                     double commissionRate,grossSales;
                     
                     boolean empFlag=true;
