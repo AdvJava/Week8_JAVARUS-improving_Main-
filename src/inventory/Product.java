@@ -1,5 +1,5 @@
 package inventory;
-
+import java.util.*;
 public class Product 
 {
     
@@ -87,45 +87,191 @@ public class Product
     //SET methods
     public void setProductId(String productId)
     {
-         this.productId = productId;
+        try
+        {
+            if(productId!="")
+            {
+                this.productId = productId;
+            }
+            else
+                throw new Exception();
+        }
+        catch(InputMismatchException | ArithmeticException error)
+        {
+            System.out.println("Invalid Value");                        
+        }
+        catch(Exception e)
+        {
+            System.out.println("Invalid Value");                          
+        }
     }
     public void setProductName(String productName)
     {
-        this.productName = productName;
+        try
+        {
+            if(productName!="")
+            {
+                this.productName = productName;
+            }
+            else
+                throw new Exception();
+        }
+        catch(InputMismatchException | ArithmeticException error)
+        {
+            System.out.println("Invalid Value");                        
+        }
+        catch(Exception e)
+        {
+            System.out.println("Invalid Value");                          
+        }
+        
     }
     public void setCategory(String category)
     {
-         this.category = category;
+        try
+        {
+            if(category!="")
+            {
+                this.category = category;
+            }
+            else
+                throw new Exception();
+        }
+        catch(InputMismatchException | ArithmeticException error)
+        {
+            System.out.println("Invalid Value");                        
+        }
+        catch(Exception e)
+        {
+            System.out.println("Invalid Value");                          
+        }
+        
     }
     public void setManufaturer(String manufacturer)
     {
-        this.manufacturer = manufacturer;
+        try
+        {
+            if(manufacturer!="")
+            {
+                this.manufacturer = manufacturer;
+            }
+            else
+                throw new Exception();
+        }
+        catch(InputMismatchException | ArithmeticException error)
+        {
+            System.out.println("Invalid Value");                        
+        }
+        catch(Exception e)
+        {
+            System.out.println("Invalid Value");                          
+        }
+       
     }
     public void setDescription(String description)
     {
-        this.description = description;
+        try
+        {
+            if(description!="")
+            {
+                this.description = description;
+            }
+            else
+                throw new Exception();
+        }
+        catch(InputMismatchException | ArithmeticException error)
+        {
+            System.out.println("Invalid Value");                        
+        }
+        catch(Exception e)
+        {
+            System.out.println("Invalid Value");                          
+        }
+        
     }
     public void setPartNum(String partNum)
     {
-        this.partNum = partNum;
+        try
+        {
+            if(partNum!="")
+            {
+                this.partNum = partNum;
+            }
+            else
+                throw new Exception();
+        }
+        catch(InputMismatchException | ArithmeticException error)
+        {
+            System.out.println("Invalid Value");                        
+        }
+        catch(Exception e)
+        {
+            System.out.println("Invalid Value");                          
+        }
+       
     }
     public void setProductCost(double productCost)
     {
-        //add validation here before setting the value
-        this.productCost = productCost;
-        //run activation check 
+        try
+        {
+            if(productCost>0.00)
+            {
+                this.productCost = productCost;
+            }
+            else
+                throw new Exception();
+        }
+        catch(InputMismatchException | ArithmeticException error)
+        {
+            System.out.println("Invalid Value");                        
+        }
+        catch(Exception e)
+        {
+            System.out.println("Invalid Value");                          
+        }
+      
     }
     public void setProductPrice(double productPrice)
     {
-        //add validation here before setting the value
-        this.productPrice = productPrice;
-        //run changeActivationState if needed
+        try
+        {
+            if(productPrice>0.00)
+            {
+                this.productPrice = productPrice;
+            }
+            else
+                throw new Exception();
+        }
+        catch(InputMismatchException | ArithmeticException error)
+        {
+            System.out.println("Invalid Value");                        
+        }
+        catch(Exception e)
+        {
+            System.out.println("Invalid Value");                          
+        }
+        
     }
     public void setProductMarkup(double productMarkup)
     {
-        //add validation here before setting the value
-        this.productMarkup = productMarkup;
-        //run changeActivationState if needed
+        try
+        {
+            if(productMarkup>0.00)
+            {
+               this.productMarkup = productMarkup;
+            }
+            else
+                throw new Exception();
+        }
+        catch(InputMismatchException | ArithmeticException error)
+        {
+            System.out.println("Invalid Value");                        
+        }
+        catch(Exception e)
+        {
+            System.out.println("Invalid Value");                          
+        }
+       
     }
     
     
